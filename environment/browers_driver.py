@@ -1,7 +1,6 @@
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-
 
 def chromebrowser():
     chrome_options = webdriver.ChromeOptions()
@@ -12,10 +11,5 @@ def chromebrowser():
     chrome_driver.maximize_window()
     return chrome_driver
 
-
-def safaribrowser():
-    return None
-
-
 mapping_browser = {"CHROME": chromebrowser,
-                   "SAFARI": safaribrowser}
+                    }
